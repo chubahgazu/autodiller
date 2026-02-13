@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             price: "$460,000",
             category: "sedan",
             engine: "6.75L V12",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Rolls-Royce_Phantom_VIII_001.jpg/800px-Rolls-Royce_Phantom_VIII_001.jpg",
+            image: "rolls-royce.jpg",
             description: "The quietest Rolls-Royce ever created. A sanctuary of peace and tranquility."
         },
         {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             price: "$302,000",
             category: "sport",
             engine: "6.0L W12",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/2024_Bentley_Continental_GT_Speed_2.jpg/800px-2024_Bentley_Continental_GT_Speed_2.jpg",
+            image: "bentley-continental.jpg",
             description: "The most dynamic road car in Bentley's 101-year history. A unique combination of performance and luxury."
         },
         {

@@ -827,6 +827,8 @@ h4 {
         gap: 10px;
         overflow-x: auto;
         justify-content: flex-start;
+        flex-wrap: nowrap;
+        /* Ensure horizontal scroll */
         padding-bottom: 10px;
         /* Space for scrollbar if needed */
         -webkit-overflow-scrolling: touch;
@@ -848,7 +850,12 @@ h4 {
     .about-container,
     .contact-container {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
+    }
+
+    /* Add spacing between service cards on mobile */
+    .service-card {
+        margin-bottom: 20px;
     }
 
     .about-image {
@@ -872,15 +879,23 @@ h4 {
     /* Details Page */
     .detail-hero {
         margin-top: 60px;
-        /* Adjust for header */
-        height: 50vh;
+        min-height: 50vh;
+        /* Ensure enough height */
+        height: auto;
+        padding: 60px 0;
     }
 
     .specs-container {
         grid-template-columns: repeat(2, 1fr);
-        margin-top: -30px;
+        margin-top: 0;
+        /* Remove negative margin to prevent overlapping */
         padding: 20px;
         gap: 15px;
+        background: #fff;
+        position: relative;
+        z-index: 10;
+        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05);
+        /* Subtle shadow upwards */
     }
 
     .spec-item {
