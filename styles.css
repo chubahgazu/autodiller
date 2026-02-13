@@ -732,16 +732,31 @@ h4 {
 
 @media (max-width: 768px) {
     :root {
-        --spacing-lg: 60px;
+        --spacing-lg: 40px;
+        /* Reduced spacing for mobile */
+    }
+
+    .section {
+        padding: 40px 0;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .container {
+        padding: 0 20px;
     }
 
     /* Header Mobile */
     .mobile-menu-toggle {
         display: block;
+        font-size: 1.5rem;
+        color: var(--color-text-light);
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 
     .nav {
@@ -751,7 +766,8 @@ h4 {
         width: 80%;
         max-width: 300px;
         height: 100vh;
-        background: var(--color-bg-light);
+        background: #111;
+        /* Solid background for visibility */
         padding: 80px 30px;
         transition: right 0.3s ease-in-out;
         z-index: 999;
@@ -764,11 +780,12 @@ h4 {
 
     .nav-list {
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
     }
 
     .nav-link {
         font-size: 1.2rem;
+        color: #fff;
     }
 
     .mobile-menu-overlay {
@@ -777,7 +794,7 @@ h4 {
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.8);
         z-index: 998;
         opacity: 0;
         visibility: hidden;
@@ -791,36 +808,59 @@ h4 {
 
     /* Hero */
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
-    .hero-bg {
-        background-position: center;
+    .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .hero-bg,
+    .detail-hero-bg {
         background-attachment: scroll;
-        /* parallax disable on mobile often better for perf */
+        /* Disable parallax on mobile */
     }
 
-    /* Grids to Stack */
+    /* Catalog */
+    .filters {
+        gap: 10px;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+        /* Space for scrollbar if needed */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filter-btn {
+        flex-shrink: 0;
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
     .catalog-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .services-grid {
-        flex-direction: column;
-    }
-
-    .about-container {
+    /* Services & About */
+    .services-grid,
+    .about-container,
+    .contact-container {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 
-    .contact-container {
-        grid-template-columns: 1fr;
+    .about-image {
+        order: -1;
+        /* Show image first on mobile for engagement */
     }
 
-    .footer-top {
+    /* Footer */
+    .footer-top,
+    .footer-bottom {
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
         text-align: center;
     }
 
@@ -829,90 +869,27 @@ h4 {
         gap: 15px;
     }
 
-    .footer-bottom {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+    /* Details Page */
+    .detail-hero {
+        margin-top: 60px;
+        /* Adjust for header */
+        height: 50vh;
     }
 
-    .footer-legal a {
-        margin: 0 10px;
-    }
-}
-
-/* --- Details Page Specifics --- */
-.detail-hero {
-    height: 60vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    background-color: #111;
-    margin-top: 70px;
-    /* Offset for fixed header */
-}
-
-.detail-hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.6;
-}
-
-.specs-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    background: #fff;
-    padding: 40px;
-    margin-top: -60px;
-    /* Overlap hero */
-    position: relative;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-}
-
-.spec-item {
-    text-align: center;
-    border-right: 1px solid #eee;
-}
-
-.spec-item:last-child {
-    border-right: none;
-}
-
-.spec-label {
-    display: block;
-    font-size: 0.9rem;
-    color: #888;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-}
-
-.spec-value {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #111;
-}
-
-
-
-@media (max-width: 768px) {
     .specs-container {
-        grid-template-columns: 1fr 1fr;
-        margin-top: 0;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: -30px;
+        padding: 20px;
+        gap: 15px;
     }
 
-    .spec-item:nth-child(2) {
+    .spec-item {
         border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
     }
 
-
+    .spec-item:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
 }
