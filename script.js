@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             price: "$230,000",
             category: "suv",
             engine: "4.0L V8 Twin-Turbo",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Lamborghini_Urus_IMG_2640.jpg/800px-Lamborghini_Urus_IMG_2640.jpg",
+            image: "lamborghini-urus.jpg",
             description: "The world's first Super Sport Utility Vehicle. Pure Lamborghini DNA."
         },
         {
