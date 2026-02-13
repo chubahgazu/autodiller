@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details | LuxeAuto</title>
+    <!-- Reuse same fonts/styles -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header (Same as index) -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Luxe<span>Auto</span></a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#catalog" class="nav-link">Catalog</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+            </div>
+        </div>
+    </header>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+
+    <!-- Detail Hero -->
+    <section class="detail-hero">
+        <div class="detail-hero-bg"></div> <!-- JS will set image -->
+        <div class="container" style="position:relative; z-index:2;">
+            <h1 id="detail-hero-title" class="hero-title">Loading...</h1>
+            <p id="detail-hero-subtitle" class="hero-subtitle">Please wait</p>
+        </div>
+    </section>
+
+    <!-- Specs & Info -->
+    <section class="section" style="background: #f9f9f9;">
+        <div class="container">
+            <!-- Floating Specs Bar -->
+            <div class="specs-container fade-in-scroll">
+                <div class="spec-item">
+                    <span class="spec-label">Year</span>
+                    <span class="spec-value" id="spec-year">-</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Engine</span>
+                    <span class="spec-value" id="spec-engine">-</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Category</span>
+                    <span class="spec-value" id="spec-category">-</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Price</span>
+                    <span class="spec-value text-gold" id="spec-price">-</span>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="section" style="background:#111; color:white;">
+        <div class="container" style="max-width: 600px;">
+            <h2 class="section-title text-white">Book a Test Drive</h2>
+            <form id="contact-form" class="contact-form" style="background: #1a1a1a;">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" required placeholder="Your Phone">
+                </div>
+                <div class="form-group">
+                    <label>Preferred Date</label>
+                    <input type="date" required style="color-scheme: dark;">
+                </div>
+                <button type="submit" class="btn btn-gold full-width">Request Appointment</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container" style="text-align: center;">
+            <p>&copy; 2026 LuxeAuto Dealership.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
